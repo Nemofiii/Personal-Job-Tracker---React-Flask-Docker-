@@ -1,0 +1,11 @@
+flask
+flask_sqlalchemy
+flask_migrate
+flask_jwt_extended
+pydantic
+click
+python-dotenv
+pytest
+flask-bcrypt
+flask-cors
+werkzeug

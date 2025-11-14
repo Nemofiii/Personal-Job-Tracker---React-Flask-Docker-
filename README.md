@@ -1,78 +1,78 @@
-🚀 JobTrackr — Personal Job Application Tracker
+# JobTrackr — Personal Job Application Tracker
 
-A full-stack job tracking application built with React (Vite) on the frontend and Flask + SQLAlchemy on the backend.
-Fully containerized using Docker, with production-ready setups including Gunicorn, Nginx, and docker-compose.
+A full-stack job tracking system built with **React (Vite)** (frontend) and **Flask + SQLAlchemy** (backend).  
+Fully containerized using **Docker**, including **Gunicorn**, **Nginx**, and **docker-compose**.
 
-📌 Features
-🔐 Authentication
+---
 
-Signup & Login using JWT
+## Features
 
-Secure password hashing with bcrypt
+### **Authentication**
+- **JWT-based** login & signup  
+- Password hashing with **bcrypt**
 
-📝 Job Management
+### **Job Management**
+- **Create / Update / Delete** job applications  
+- Track **company**, **status**, **description**, **dates**, and **uploaded resumes**  
+- View / download resume files  
 
-Add, edit, and delete job applications
+### **Modern Frontend**
+- **React (Vite)**  
+- **TailwindCSS**  
+- **React Router**  
+- Reusable **Axios** instance  
 
-Track company, status, description, dates, and uploaded resume files
+### **Backend API**
+- **Flask** with Blueprint architecture  
+- **SQLAlchemy ORM**  
+- **SQLite** (development database)  
+- **Pydantic** validation  
+- Fully **RESTful** endpoints  
 
-Download and view uploaded resume files
+### **Docker Setup**
+- **Frontend:** Built with Node → served by **Nginx**  
+- **Backend:** Flask served via **Gunicorn**  
+- Managed using **docker-compose**  
 
-🎨 Modern Frontend
+---
 
-React (Vite)
+## Running with Docker
 
-TailwindCSS
-
-React Router
-
-Reusable Axios API service
-
-🛠️ Backend API
-
-Flask with Blueprint architecture
-
-SQLAlchemy ORM models
-
-Database: SQLite (local)
-
-Pydantic request validation
-
-RESTful API endpoints
-
-🐳 Complete Docker Setup
-
-Frontend: Built with Node → served using Nginx
-
-Backend: Flask app served using Gunicorn
-
-docker-compose: Connects frontend + backend services
-
-🐳 Running with Docker
-Build & run all services
+### **Build & run all services**
+```bash
 docker compose up --build
+```
 
-🌐 Access the App
+---
 
-Frontend: http://localhost:3000
+## Access the Application
 
-Backend API: http://localhost:8000
+### **Frontend**
+http://localhost:3000
 
-📡 API Endpoints (Summary)
-🔐 Auth
-POST /api/auth/signup
-POST /api/auth/login
+### **Backend API**
+http://localhost:8000
 
-👤 User
-GET  /api/user
-PUT  /api/user
+---
 
-📝 Jobs
-GET    /api/jobs
-POST   /api/jobs
-PUT    /api/jobs/<id>
-DELETE /api/jobs/<id>
+## API Endpoints
 
-📎 Resume Upload
-POST /api/jobs/upload-resume
-GET  /api/jobs/resume/<filename>
+### **Authentication**
+- **POST /api/auth/signup** — Create a new user  
+- **POST /api/auth/login** — Login and receive JWT  
+
+### **User**
+- **GET /api/user** — Fetch user profile  
+- **PUT /api/user** — Update user profile  
+
+### **Jobs**
+- **GET /api/jobs** — Get all job entries  
+- **POST /api/jobs** — Create a job entry  
+- **PUT /api/jobs/<id>** — Update a specific job  
+- **DELETE /api/jobs/<id>** — Delete a job entry  
+
+### **Resume Uploads**
+- **POST /api/jobs/upload-resume** — Upload a resume file  
+- **GET /api/jobs/resume/<filename>** — Retrieve a resume file  
+
+---

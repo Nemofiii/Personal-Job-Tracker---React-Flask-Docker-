@@ -9,3 +9,6 @@ pytest
 flask-bcrypt
 flask-cors
 werkzeug
+gunicorn
+pydantic[email]
+email-validator

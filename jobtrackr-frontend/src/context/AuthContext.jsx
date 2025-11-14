@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from "react";
 import api from "../api/axios"
-import { local } from "d3";
 
 export const AuthContext = createContext();
 

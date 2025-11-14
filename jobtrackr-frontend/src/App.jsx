@@ -5,6 +5,7 @@ import SignupPage from './pages/SignupPage';
 import Dashboard from './pages/Dashboard';
 import AddJob from './pages/AddJob';
 import ProtectedRoute from './components/ProtectedRoute';
+import { Navigate } from 'react-router-dom';
 
 //routing struncture for the app
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
     <AuthProvider>
       <Router>
         <Routes>
+          <Route path='/' element={<Navigate to="/login" />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route 
